@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="milhao.JogoPage">
+
+<Grid>
+      <Grid.RowDefinitions>
+      <RowDefinition Heigth="150"/>
+      <RowDefinition Heigth="*"/>
+      <RowDefinition Heigth="*"/>
+      <RowDefinition Heigth="*"/>
+      <RowDefinition Heigth="*"/>
+      <RowDefinition Heigth="*"/>
+      <RowDefinition Heigth="*"/>
+      <RowDefinition Heigth="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+               <ColumnDefinitions Width="*"/>
+               <ColumnDefinitions Width="*"/>
+               <ColumnDefinitions Width="*"/>
+               </Grid.ColumnDefinitions>
+
+       <Imagem Source="jogocassino.png"
+       Aspect="AspectFill"
+       Grid.RowSpan="8"
+       BackgroundColor="Black"
+       Grid.ColumnSpan="3"/>
+      
+      
+
+
+</Grid>
+ </ContentPage>
