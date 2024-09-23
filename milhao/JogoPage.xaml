@@ -5,27 +5,66 @@
 
 <Grid>
       <Grid.RowDefinitions>
-      <RowDefinition Heigth="150"/>
-      <RowDefinition Heigth="*"/>
-      <RowDefinition Heigth="*"/>
-      <RowDefinition Heigth="*"/>
-      <RowDefinition Heigth="*"/>
-      <RowDefinition Heigth="*"/>
-      <RowDefinition Heigth="*"/>
-      <RowDefinition Heigth="*"/>
+      <RowDefinition Height="150"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
       </Grid.RowDefinitions>
+     
       <Grid.ColumnDefinitions>
-               <ColumnDefinitions Width="*"/>
-               <ColumnDefinitions Width="*"/>
-               <ColumnDefinitions Width="*"/>
+               <ColumnDefinition Width="*"/>
+               <ColumnDefinition Width="*"/>
+               <ColumnDefinition Width="*"/>
                </Grid.ColumnDefinitions>
 
-       <Imagem Source="jogocassino.png"
-       Aspect="AspectFill"
-       Grid.RowSpan="8"
-       BackgroundColor="Black"
-       Grid.ColumnSpan="3"/>
+       <Image Source="jogocassino.png"
+            Aspect="AspectFill"
+            Grid.RowSpan="8"
+            BackgroundColor="Black"
+            Grid.ColumnSpan="3"/>
+       
+       <Label Text="Pergunta"
+            Margin="5"
+            TextColor="Black"
+            FontSize="12"
+            Grid.Row="1"
+            Grid.ColumnSpan="3" />
+
+       <Button Text="Alternativa A"
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+            BorderColor="White"
+            BorderWidth="1"
+            CornerRadius="30"
+            BackgroundColor="black"
+            TextColor="White"
+            Margin="0, 10, 0, 10"
+            FontSize="19"/>
       
+      <Button Text="Alternativa B"
+            Grid.Row="3"
+            Grid.ColumnSpan="3"
+            BorderColor="White"
+            BorderWidth="1"
+            CornerRadius="30"
+            BackgroundColor="black"
+            TextColor="White"
+            FontSize="19"/>
+
+             
+       <Button Text="Alternativa c"
+            Grid.Row="4"
+            Grid.ColumnSpan="3"
+            BorderColor="White"
+            BorderWidth="1"
+            CornerRadius="30"
+            BackgroundColor="black"
+            TextColor="White"
+            FontSize="19"/>     
       
 
 
