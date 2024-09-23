@@ -40,7 +40,7 @@
             BorderColor="White"
             BorderWidth="1"
             CornerRadius="30"
-            BackgroundColor="black"
+            BackgroundColor="#241a0e"
             TextColor="White"
             Margin="0, 10, 0, 10"
             FontSize="19"/>
@@ -51,21 +51,77 @@
             BorderColor="White"
             BorderWidth="1"
             CornerRadius="30"
-            BackgroundColor="black"
+            BackgroundColor="#241a0e"
+            Margin="0, 10, 0, 10"
             TextColor="White"
             FontSize="19"/>
 
              
-       <Button Text="Alternativa c"
+       <Button Text="Alternativa C"
             Grid.Row="4"
             Grid.ColumnSpan="3"
             BorderColor="White"
             BorderWidth="1"
             CornerRadius="30"
             BackgroundColor="black"
+            Margin="0, 10, 0, 10"
             TextColor="White"
-            FontSize="19"/>     
-      
+            FontSize="19"/>  
+
+        <Button Text="Alternativa D"
+            Grid.Row="5"
+            Grid.ColumnSpan="3"
+            BorderColor="White"
+            BorderWidth="1"
+            CornerRadius="30"
+            BackgroundColor="black"
+            Margin="0, 10, 0, 10"
+            TextColor="White"
+            FontSize="19"/>   
+
+        <Button Text="Alternativa E"
+            Grid.Row="6"
+            Grid.ColumnSpan="3"
+            BorderColor="White"
+            BorderWidth="1"
+            CornerRadius="30"
+            BackgroundColor="black"
+            Margin="0, 10, 0, 10"
+            TextColor="White"
+            FontSize="19"/> 
+
+        <Button Text="Cartas"
+            Grid.Row="7"
+            Grid.ColumnSpan="0"
+            BorderColor="White"
+            BorderWidth="1"
+            CornerRadius="50"
+            BackgroundColor="black"
+            Margin="0, 10, 0, 10"
+            TextColor="White"
+            FontSize="15"/>  
+
+        <Button Text="Retirar 1 Errado"
+            Grid.Row="7"
+            Grid.ColumnSpan="1"
+            BorderColor="White"
+            BorderWidth="1"
+            CornerRadius="50"
+            BackgroundColor="black"
+            Margin="0, 10, 0, 10"
+            TextColor="White"
+            FontSize="15"/>       
+
+        <Button Text="Ajuda"
+            Grid.Row="7"
+            Grid.ColumnSpan="2"
+            BorderColor="White"
+            BorderWidth="1"
+            CornerRadius="50"
+            BackgroundColor="black"
+            Margin="0, 10, 0, 10"
+            TextColor="White"
+            FontSize="15"/>    
 
 
 </Grid>
