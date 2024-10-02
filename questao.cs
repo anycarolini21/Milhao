@@ -28,50 +28,67 @@ namespace milhao
             buttonRespostaUm.Text = RespostaTres;
             buttonRespostaUm.Text = RespostaQuatro;
             buttonRespostaUm.Text = RespostaCinco;
+
+            this.ButtonResposta1!.BackgroundColor = Colors.DarkBlue;
+            this.ButtonResposta1!.TextColor       = Colors.White;
+            this.ButtonResposta2!.BackgroundColor = Colors.DarkBlue;
+            this.ButtonResposta2!.TextColor       = Colors.White;
+            this.ButtonResposta3!.BackgroundColor = Colors.DarkBlue;
+            this.ButtonResposta3!.TextColor       = Colors.White;
+            this.ButtonResposta4!.BackgroundColor = Colors.DarkBlue;
+            this.ButtonResposta4!.TextColor       = Colors.White;
+            this.ButtonResposta5!.BackgroundColor = Colors.DarkBlue;
+            this.ButtonResposta5!.TextColor       = Colors.White;
         }
         public Questao (Label LP, Button bt01, Button bt02,Button bt03, Button bt04, Button bt05)
         {
-            labelPergunta = LP;
-            buttonRespostaUm = bt01;
-            buttonRespostaUm = bt02;
-            buttonRespostaUm = bt03;
-            buttonRespostaUm = bt04;
-            buttonRespostaUm = bt05;
+            labelPergunta = LabelPergunta;
+            buttonResposta1 = bt01;
+            buttonResposta2 = bt02;
+            buttonResposta3 = bt03;
+            buttonResposta4 = bt04;
+            buttonResposta5 = bt05;
         }
         public void ConfigurarDesenho (Label LP, Button bt01, Button bt02,Button bt03, Button bt04, Button bt05)
         {
-            labelPergunta = LP;
-            buttonRespostaUm.Text = RespostaUm;
-            buttonRespostaUm.Text = RespostaDois;
-            buttonRespostaUm.Text = RespostaTres;
-            buttonRespostaUm.Text = RespostaQuatro;
-            buttonRespostaUm.Text = RespostaCinco;
+            labelPergunta = LabelPergunta;
+            buttonRespostaUm.Text = Resposta1;
+            buttonRespostaUm.Text = Resposta2;
+            buttonRespostaUm.Text = Resposta3;
+            buttonRespostaUm.Text = Resposta4;
+            buttonRespostaUm.Text = Resposta5;
         }
-        public bool VerificarResposta (int RespostaEscolhida)
+        public bool VerificaResposta(int RespostaSelecionada)
         {
-            if ( RespostaEscolhida == RespostaCerta )
+            if (Respostacorreta == RespostaSelecionada)
             {
-                var b = Qual (RespostaEscolhida);
-                bool.BackgroundColor = Color.Green;
+                var Button = QualButton(RespostaSelecionada);
+                Button.BackgroundColor = Colors.Green;
                 return true;
             }
-            else 
+            else
             {
+                var ButtonCorreto = QualButton (Respostacorreta);
+                var ButtonIncorreto = QualButton (RespostaSelecionada);
+                ButtonCorreto.BackgroundColor = Colors.Yellow;
+                ButtonIncorreto.BackgroundColor = Colors.Red;
                 return false;
             }
         }
         private Button Qual (int RespostaEscolhida)
         {
             if (RespostaEscolhida == 1 )
-            return buttonRespostaUm;
+            return buttonResposta1;
             else if (RespostaEscolhida == 2 )
-            return buttonRespostaDois;
+            return buttonResposta2;
             else if (RespostaEscolhida == 3 )
-            return buttonRespostaTres;
+            return buttonResposta3;
             else if (RespostaEscolhida == 4 )
-            return buttonRespostaQuatro;
+            return buttonResposta4;
             else if (RespostaEscolhida == 5 )
-            return buttonRespostaCinco;
+            return buttonResposta5;
+            else 
+            return null;
         }
     
         }

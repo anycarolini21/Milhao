@@ -1,35 +1,37 @@
-using System.Security.Cryptography.X509Certificates;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public class Gerenciador
 {
-  List<Questao> ListaQuestoes = new List<Questao>();
-  List<int> ListaQuestoesRespondidas = new List<int>();
-  Questao QuestaoCorrente;
+    List<Questao> ListaQuestoes = new List<Questao>();
+    List<int> ListaQuestoesRespondidas = new List<int>();
+    Questao QuestaoCorrente;
+    int Pontuacao { get; set; }
+    int NivelAtual = 0;
 
-
-  public Gerenciador(LabelPerg, Button bt01)
-  {
-    CriaPerguntas(labePerg, Button bt01)
-  }
-
-        {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
-      Q1.Pergunta = "Quanto é 2+2?";
-      Q1.Pergunta01 = "2";
-      Q1.Pergunta02 = "22";
-      Q1.Pergunta03 = "4";
-      Q1.Pergunta04 = "sim";
-      Q1.Pergunta05 = "1";
-      Q1.ResposraCorreta = 3;
-      Q1.Nivel = 1;
-      ListaQuestoes.Add(Q1);
-      var Q2 = new Questao();
+    public Gerenciador(Label LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05)
+    {
+        CriaPerguntas(LabelPergunta, bt01, bt02, bt03, bt04, bt05);
     }
 
+    void CriaPerguntas(Label LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05)
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+        var Q1 = new Questao();
+        Q1.ConfigurarDesenho(LabelPergunta, bt01, bt02, bt03, bt04, bt05);
+        Q1.Pergunta = "Quanto é 2+2?";
+        Q1.Pergunta01 = "2";
+        Q1.Pergunta02 = "22";
+        Q1.Pergunta03 = "4";
+        Q1.Pergunta04 = "sim";
+        Q1.Pergunta05 = "1";
+        Q1.RespostaCorreta = 3;
+        Q1.Nivel = 1;
+        ListaQuestoes.Add(Q1);
+
+            {
+      var Q2 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Qual é a capital da França?";
       Q1.Pergunta01 = "Londres";
       Q1.Pergunta02 = "Berlim";
@@ -42,8 +44,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q3 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Em que ano o Brasil foi descoberto?";
       Q1.Pergunta01 = "1550";
       Q1.Pergunta02 = "1500";
@@ -56,8 +58,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q4 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Quem pintou a Mona Lisa?";
       Q1.Pergunta01 = "Michelangelo";
       Q1.Pergunta02 = "Leonardo da Vinci";
@@ -70,8 +72,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q5 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Qual o maior planeta do sistema solar?";
       Q1.Pergunta01 = "Terra";
       Q1.Pergunta02 = "Marte";
@@ -84,8 +86,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q6 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Qual é o idioma mais falado do mundo?";
       Q1.Pergunta01 = "Inglês";
       Q1.Pergunta02 = "Francês";
@@ -98,8 +100,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q7 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Quem foi o primeiro presidente dos Estados Unidos?";
       Q1.Pergunta01 = "Thomas Jefferson";
       Q1.Pergunta02 = "George Washington";
@@ -112,8 +114,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q8 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Em que ano terminou a Segunda Guerra Mundial?";
       Q1.Pergunta01 = "1940";
       Q1.Pergunta02 = "1985";
@@ -126,8 +128,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q9 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Qual civilização construiu as pirâmides do Egito?";
       Q1.Pergunta01 = "Romana";
       Q1.Pergunta02 = "Maia";
@@ -140,8 +142,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q10 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Quem foi Dom Pedro I?";
       Q1.Pergunta01 = "Rei de Portugal";
       Q1.Pergunta02 = "Leonardo da Vinci";
@@ -154,8 +156,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q11 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "O que foi a Revolução Industrial?";
       Q1.Pergunta01 = "Mudança para a produção em massa";
       Q1.Pergunta02 = "Revolta política";
@@ -168,8 +170,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q12 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Qual é o maior país do mundo?";
       Q1.Pergunta01 = "China";
       Q1.Pergunta02 = "Brasil";
@@ -182,8 +184,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q13 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Onde está localizada a Torre Eiffel";
       Q1.Pergunta01 = "Roma";
       Q1.Pergunta02 = "Londres";
@@ -196,8 +198,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q14 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Qual é o rio mais longo do mundo?";
       Q1.Pergunta01 = "Nilo";
       Q1.Pergunta02 = "Amazonas";
@@ -210,8 +212,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q15 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Quais são os cinco oceanos do planeta?";
       Q1.Pergunta01 = "Atlântico, Pacífico, Índico, Ártico, Antártico";
       Q1.Pergunta02 = " Atlântico, Pacífico, Índico, Sul, Norte";
@@ -224,8 +226,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q16 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Em que continente fica o Egito?";
       Q1.Pergunta01 = "América";
       Q1.Pergunta02 = "Europa";
@@ -238,8 +240,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q17 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Qual é a fórmula química da água?";
       Q1.Pergunta01 = "H2";
       Q1.Pergunta02 = "O2";
@@ -252,8 +254,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q18 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Quem é o cantor da música Thriller?";
       Q1.Pergunta01 = "Elvis Presley";
       Q1.Pergunta02 = "Whitney Houston";
@@ -266,8 +268,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q19 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Em qual filme aparece o personagem Jack Sparrow?";
       Q1.Pergunta01angel = "O Senhor dos Anéis";
       Q1.Pergunta02 = "O Rei Leão";
@@ -280,8 +282,8 @@ public class Gerenciador
     }
 
     {
-      var Q1 = new Questao();
-      Q1.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q20 = new Questao();
+      Q1.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q1.Pergunta = "Quantas Copas do Mundo de Futebol o Brasil ganhou?";
       Q1.Pergunta01 = "5";
       Q1.Pergunta02 = "3";
@@ -294,8 +296,8 @@ public class Gerenciador
     }
 
     {
-      var Q5 = new Questao();
-      Q5.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q21 = new Questao();
+      Q5.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q5.Pergunta = "Quem escreveu 'Dom Casmurro'?";
       Q5.Pergunta01 = "José de Alencar";
       Q5.Pergunta02 = "Graciliano Ramos";
@@ -308,8 +310,8 @@ public class Gerenciador
     }
 
     {
-      var Q7 = new Questao();
-      Q7.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q22 = new Questao();
+      Q7.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q7.Pergunta = "Quem é o autor de 'Harry Potter'?";
       Q7.Pergunta01 = "C.S. Lewis";
       Q7.Pergunta02 = "Suzanne Collins";
@@ -322,8 +324,8 @@ public class Gerenciador
     }
 
     {
-      var Q8 = new Questao();
-      Q8.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q23 = new Questao();
+      Q8.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q8.Pergunta = "Qual é a teoria que explica a origem do universo?";
       Q8.Pergunta01 = "Teoria da Evolução";
       Q8.Pergunta02 = "Teoria da Relatividade";
@@ -336,8 +338,8 @@ public class Gerenciador
     }
 
     {
-      var Q9 = new Questao();
-      Q9.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q24 = new Questao();
+      Q9.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q9.Pergunta = "Quem dirigiu 'Titanic'?";
       Q9.Pergunta01 = "Steven Spielberg";
       Q9.Pergunta02 = "George Lucas";
@@ -350,8 +352,8 @@ public class Gerenciador
     }
 
     {
-      var Q10 = new Questao();
-      Q10.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q25 = new Questao();
+      Q10.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q10.Pergunta = "Qual é a música tema de 'Star Wars'?";
       Q10.Pergunta01 = "The Imperial March";
       Q10.Pergunta02 = "Duel of the Fates";
@@ -364,8 +366,8 @@ public class Gerenciador
     }
 
     {
-      var Q11 = new Questao();
-      Q11.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q26 = new Questao();
+      Q11.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q11.Pergunta = "Qual é a capital do Japão?";
       Q11.Pergunta01 = "Seul";
       Q11.Pergunta02 = "Tóquio";
@@ -378,8 +380,8 @@ public class Gerenciador
     }
 
     {
-      var Q12 = new Questao();
-      Q12.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q27 = new Questao();
+      Q12.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q12.Pergunta = "Qual é o menor país do mundo?";
       Q12.Pergunta01 = "Mônaco";
       Q12.Pergunta02 = "Vaticano";
@@ -393,8 +395,8 @@ public class Gerenciador
     }
 
     {
-      var Q13 = new Questao();
-      Q13.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q28 = new Questao();
+      Q13.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q13.Pergunta = "Quem descobriu a penicilina?";
       Q13.Pergunta01 = "Louis Pasteur";
       Q13.Pergunta02 = "Alexander Fleming";
@@ -407,8 +409,8 @@ public class Gerenciador
     }
 
     {
-      var Q14 = new Questao();
-      Q14.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q29 = new Questao();
+      Q14.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q14.Pergunta = "Qual é a língua mais falada do mundo?";
       Q14.Pergunta01 = "Espanhol";
       Q14.Pergunta02 = "Inglês";
@@ -416,13 +418,14 @@ public class Gerenciador
       Q14.Pergunta04 = "Mandarim";
       Q14.Pergunta05 = "Árabe";
       Q14.RespostaCorreta = 4;
+      
       Q14.Nivel = 4;
       ListaQuestoes.Add(Q29);
     }
 
     {
-      var Q14 = new Questao();
-      Q14.ConfigurarDesenho(LabelPerg, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
+      var Q30 = new Questao();
+      Q14.ConfigurarDesenho(LabelPergunta, Button bt01, Button bt02, Button bt03, Button bt04, Button bt05);
       Q14.Pergunta = "Com quantos anos é permitido dirigir no Brasil";
       Q14.Pergunta01 = "15";
       Q14.Pergunta02 = "21";
@@ -434,75 +437,53 @@ public class Gerenciador
       ListaQuestoes.Add(Q30);
     }
 
-
-
-
-
-  public async void VerificaCorreta(int rr)
-  {
-    if (QuestaoCorreta.EstaCorreto(rr))
+    public async void VerificaCorreta(int rr)
     {
-      await Iask.Delay(1000);
-      AdicionaPontuacao(NivelAtual);
-      NivelAtual++, //NivelAtual = NivelAtual +1;
+        if (QuestaoCorrente.EstaCorreto(rr))
+        {
+            await Task.Delay(1000);
+            AdicionaPontuacao(NivelAtual);
+            NivelAtual++;
             ProximaQuestao();
-    }
-    else
-    {
-      await App.Current.MainPage.DisplayAcert("Fim")
+        }
+        else
+        {
+            await App.Current.MainPage.DisplayAlert("Fim", "Fim do Jogo", "OK");
             Inicializar();
+        }
     }
-  }
 
-  void ProximaQuestao()
-  {
-    var numAleat = Random.Shared.Next(0, ListaQuestoes.Count);
-    while (ListaQuestoesRespondidas.Contains(numAleat))
-      numAleat = Random.Shared.Next(0, ListaQuestoes.Count);
+    void ProximaQuestao()
+    {
+        var numAleat = Random.Shared.Next(0, ListaQuestoes.Count);
+        while (ListaQuestoesRespondidas.Contains(numAleat))
+        {
+            numAleat = Random.Shared.Next(0, ListaQuestoes.Count);
+        }
 
-    ListaQuestoesRespondidas.Add(numAleat);
-    QuestaoCorrente = ListaQuestoes[numAleat];
-    QuestaoCorrente.Desenha();
-  }
+        ListaQuestoesRespondidas.Add(numAleat);
+        QuestaoCorrente = ListaQuestoes[numAleat];
+        QuestaoCorrente.Desenha();
+    }
 
+    void Inicializar()
+    {
+        Pontuacao = 0;
+        NivelAtual = 1;
+        ProximaQuestao();
+    }
 
-
-        public int Pontuacao { get; private set; }
-int NivelAtual = 0;
-void Inicializar()
-{
-  Pontuacao = 0;
-  NivelAtual = 1;
-  ProximaQuestao();
+    void AdicionaPontuacao(int n)
+    {
+        if (n == 1) Pontuacao = 1000;
+        else if (n == 2) Pontuacao = 2000;
+        else if (n == 3) Pontuacao = 5000;
+        else if (n == 4) Pontuacao = 10000;
+        else if (n == 5) Pontuacao = 20000;
+        else if (n == 6) Pontuacao = 50000;
+        else if (n == 7) Pontuacao = 100000;
+        else if (n == 8) Pontuacao = 200000;
+        else if (n == 9) Pontuacao = 500000;
+        else if (n == 10) Pontuacao = 1000000;
+    }
 }
-
-
-void Adiciona Pontuacao(int n)
-          {
-            if(n == 1)
-            pontuacao = 1000;
-            else if (n == 2)
-  pontuacao 2000;
-            else if (n == 3)
-  pontuacao 5000;
-            else if (n == 4)
-  pontuacao 10000;
-            else if (n == 5)
-  pontuacao 20000;
-            else if (n == 6)
-  pontuacao 50000;
-            else if (n == 7)
-  pontuacao 100000;
-            else if (n == 8)
-  pontuacao 200000;
-            else if (n == 9)
-  pontuacao 500000;
-            else if (n == 10)
-  pontuacao 1000000;
-          }
-        
-  
-          
-        
-      
-  
