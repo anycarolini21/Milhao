@@ -1,21 +1,21 @@
-namespace milhao 
+namespace milhao
 {
     public class Questao
     {
         public string Pergunta;
-        public string RespostaUm;
-        public string RespostaDois;
-        public string RespostaTres;
-        public string RespostaQuatro;
-        public string RespostaCinco;
+        public string Pergunta01;
+        public string Pergunta02;
+        public string Pergunta03;
+        public string Pergunta04;
+        public string Pergunta05;
         public int RespostaCerta = 0;
         public int Nivel;
         private Label labelPergunta;
-        private Button buttonRespostaUm;
-        private Button buttonRespostaDois;
-        private Button buttonRespostaTres;
-        private Button buttonRespostaQuatro;
-        private Button buttonRespostaCinco;
+        private Button buttonPergunta01;
+        private Button buttonPergunta02;
+        private Button buttonPergunta03;
+        private Button buttonPergunta04;
+        private Button buttonPergunta05;
         public Questao ()
         {
 
@@ -23,11 +23,11 @@ namespace milhao
         public void Desenhar ()
         {
             labelPergunta.Text = Pergunta;
-            buttonRespostaUm.Text = RespostaUm;
-            buttonRespostaUm.Text = RespostaDois;
-            buttonRespostaUm.Text = RespostaTres;
-            buttonRespostaUm.Text = RespostaQuatro;
-            buttonRespostaUm.Text = RespostaCinco;
+            buttonRespostaUm.Text = Pergunta01;
+            buttonRespostaUm.Text = Pergunta02;
+            buttonRespostaUm.Text = Pergunta03;
+            buttonRespostaUm.Text = Pergunta04;
+            buttonRespostaUm.Text = Pergunta05;
 
             this.ButtonResposta1!.BackgroundColor = Colors.DarkBlue;
             this.ButtonResposta1!.TextColor       = Colors.White;
@@ -60,7 +60,7 @@ namespace milhao
         }
         public bool VerificaResposta(int RespostaSelecionada)
         {
-            if (Respostacorreta == RespostaSelecionada)
+            if (RespostaCorreta == RespostaSelecionada)
             {
                 var Button = QualButton(RespostaSelecionada);
                 Button.BackgroundColor = Colors.Green;
@@ -68,7 +68,7 @@ namespace milhao
             }
             else
             {
-                var ButtonCorreto = QualButton (Respostacorreta);
+                var ButtonCorreto = QualButton (RespostaCorreta);
                 var ButtonIncorreto = QualButton (RespostaSelecionada);
                 ButtonCorreto.BackgroundColor = Colors.Yellow;
                 ButtonIncorreto.BackgroundColor = Colors.Red;
