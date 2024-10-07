@@ -64,7 +64,7 @@
                          Grid.Row="5"
                          Grid.ColumnSpan="3"
                          Text="d-"
-                         BackgroundColor="Black"
+                         BackgroundColor="Black" 
                          TextColor="White"
                          Clicked="Botao4"
                          FontSize="12"

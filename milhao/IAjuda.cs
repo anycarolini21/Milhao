@@ -2,20 +2,20 @@ using Milhao;
 
 public abstract class IAjuda
 {
-    protected Button ButtonResposta1;
-    protected Button ButtonResposta2;
-    protected Button ButtonResposta3;
-    protected Button ButtonResposta4;
-    protected Button ButtonResposta5;
+    protected Button Botao1;
+    protected Button Botao2;
+    protected Button Botao3;
+    protected Button Botao4;
+    protected Button Botao5;
     protected Frame frameAjuda;
 
-    public void ConfiguraDesenho(Button ButtonResposta1, Button ButtonResposta2, Button ButtonResposta3, Button ButtonResposta4, Button ButtonResposta5)
+    public void ConfiguraDesenho( Botao1, Botao2,  Botao3,  Botao4, Botao5)
     {
-        this.ButtonResposta1 = ButtonResposta1;
-        this.ButtonResposta2 = ButtonResposta2;
-        this.ButtonResposta3 = ButtonResposta3;
-        this.ButtonResposta4 = ButtonResposta4;
-        this.ButtonResposta5 = ButtonResposta5;
+        this.Butao1 = Butao1;
+        this.Butao2 = Butao2;
+        this.Butao3 = Butao3;
+        this.Butao4 = Butao4;
+        this.Butao5 = Butao5;
     }
     public void ConfiguraDesenho(Frame frameAjuda)
     {

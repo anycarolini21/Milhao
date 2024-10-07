@@ -16,19 +16,19 @@ public class Universitario : IAjuda
             switch (i)
             {
                 case 0:
-                    ButtonResposta1.Text += "=" + numRand.ToString() + "%";
+                    Botao1.Text += "=" + numRand.ToString() + "%";
                     break;
                 case 1:
-                    ButtonResposta2.Text += "=" + numRand.ToString() + "%";
+                    Botao2.Text += "=" + numRand.ToString() + "%";
                     break;
                 case 2:
-                    ButtonResposta3.Text += "=" + numRand.ToString() + "%";
+                    Botao3.Text += "=" + numRand.ToString() + "%";
                     break;
                 case 3:
-                    ButtonResposta4.Text += "=" + numRand.ToString() + "%";
+                    Botao4.Text += "=" + numRand.ToString() + "%";
                     break;
                 case 4:
-                    ButtonResposta5.Text += "=" + numRand.ToString() + "%";
+                    Botao5.Text += "=" + numRand.ToString() + "%";
                     break;
 
             }

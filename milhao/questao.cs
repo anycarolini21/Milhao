@@ -43,11 +43,11 @@ namespace milhao
         public Questao (Label LP, Button bt01, Button bt02,Button bt03, Button bt04, Button bt05)
         {
             labelPergunta = LabelPergunta;
-            buttonResposta1 = bt01;
-            buttonResposta2 = bt02;
-            buttonResposta3 = bt03;
-            buttonResposta4 = bt04;
-            buttonResposta5 = bt05;
+            Botao1 = bt01;
+            Botao2 = bt02;
+            Botao3 = bt03;
+            Botao4 = bt04;
+            Botao5 = bt05;
         }
         public void ConfigurarDesenho (Label LP, Button bt01, Button bt02,Button bt03, Button bt04, Button bt05)
         {

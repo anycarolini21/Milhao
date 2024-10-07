@@ -36,7 +36,7 @@ public partial class MainPage : ContentPage
 	void retiraaoclicar(object sender, EventArgs args)
 	{
 		var ajuda = new RetiraErrada();
-		ajuda.ConfiguraDesenho( ButtonResposta1, ButtonResposta2,  ButtonResposta3,  ButtonResposta4, ButtonResposta5);
+		ajuda.ConfiguraDesenho( Botao1, Botao2,  Botao3,  Botao4, Botao5);
 		ajuda.RealizaAjuda(gerenciador.GetQuestaoCorrente());
 		(sender as Button).IsVisible = false;
 
@@ -45,7 +45,7 @@ public partial class MainPage : ContentPage
 	void botaouniversitario(object sender, EventArgs args)
 	{
 		var ajuda = new Universitario();
-		ajuda.ConfiguraDesenho( ButtonResposta1, ButtonResposta2,  ButtonResposta3,  ButtonResposta4, ButtonResposta5);
+		ajuda.ConfiguraDesenho( Botao1, Botao2,  Botao3,  Botao4, Botao5);
 		ajuda.RealizaAjuda(gerenciador.GetQuestaoCorrente());
 		(sender as Button).IsVisible = false;
 
